@@ -19,5 +19,5 @@ public interface ProductDao {
     //删除商品
     int delete(int productId);
     //商品分类
-    List<Product> classify(String productType,@Param("pageNum") int pageNum,@Param("pageSize") int pageSize);
+    List<Product> classify(String productType);
 }

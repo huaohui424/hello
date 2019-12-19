@@ -32,7 +32,7 @@ public class ProductService {
         return productDao.delete(productId);
     }
     //商品分类
-    public List<Product> classify(String productType,int pageNum,int pageSize){
-        return productDao.classify(productType,pageNum,pageSize);
+    public List<Product> classify(String productType){
+        return productDao.classify(productType);
     }
 }

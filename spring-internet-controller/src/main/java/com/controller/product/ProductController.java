@@ -21,10 +21,9 @@ public class ProductController {
     private ProductService productService;
     //根据类型查询商品
     @RequestMapping("/productClassify")
-    public ModelAndView productClassify(String type,@RequestParam(value = "pageNum",defaultValue = "1",required = false) int pageNum,
-                                        @RequestParam(value = "pageSize",defaultValue = "11",required = false)int pageSize){
+    public ModelAndView productClassify(String type){
         ModelAndView view = new ModelAndView();
-        List<Product> product = productService.classify(type,pageNum,pageSize);
+        List<Product> product = productService.classify(type);
         view.addObject("product",product);
         view.setViewName("bar/index");
         return view;

@@ -5,14 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>野心网咖登录界面</title>
-<link rel="stylesheet" type="text/css" href="/static/login/css/style.css" />
-<link rel="stylesheet" type="text/css" href="/static/login/css/body.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/login/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/static/login/css/body.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/a.css"/>
+	<link rel="stylesheet" href="/static/layui/css/layui.css"  media="all">
+	<script type="text/javascript" src="\static\js\jquery-1.7.2.js"></script>
+
 </head>
 <body>
-<div class="container">
+<div style="display: block" class="container" id="nameAndPass">
 	<section id="content">
 		<form action="${pageContext.request.contextPath}/login" method="post">
-			<h1>会员登录</h1>
+			<h1>管理员登入</h1>
 			<div>
 				<input type="text" placeholder="用户名" name="username" value="admin" required="" id="username" />
                 <br><span style="color: red">${msg1}</span>
@@ -28,20 +32,49 @@
 			 <div class="">
 				<span class="help-block u-errormessage" id="js-server-helpinfo">&nbsp;</span>
 			 </div>
+
 			<div class="button">
 				<canvas width="200" height="60" id="check" style="border:1px solid #000;">您的浏览器不支持canvas标签！</canvas>
 			</div>
 			<div>
 				<!-- <input type="submit" value="Log in" /> -->
 				<input type="submit" value="登录" class="btn btn-primary" id="js-btn-login"/>
-				<a href="#">忘记密码?</a>
+				<button id="duanxindl" type="button" class="layui-btn layui-btn-primary layui-btn-sm">短信登录</button>
+				<%--<a id="duanxindl" onclick="dxdl()">短信登录</a>--%>
 				<!-- <a href="#">Register</a> -->
 			</div>
-		</form><!-- form -->
-		<%-- <div class="button">
-			<span class="help-block u-errormessage" id="js-server-helpinfo">&nbsp;</span>
-			<a href="#">下载网盘</a>
-		</div> <!-- button -->--%>
+		</form>
+
+	</section><!-- content -->
+</div>
+
+<div style="display: none" class="container" id="duanxin">
+	<section id="content">
+		<form action="${pageContext.request.contextPath}/SMSVerification" method="post">
+			<h1>管理员登入</h1>
+			<div>
+				<input type="text" placeholder="手机号码" name="phoneNumber" id="sjhm" required="" />
+				<a id="hqyzm" href="">获取验证码</a>
+			</div>
+			<div>
+				<input type="text" placeholder="验证码" name="content" id="yzm" required=""/>
+			</div>
+
+			<div class="">
+				<span class="help-block u-errormessage" >&nbsp;</span>
+			</div>
+
+
+			<div>
+				<!-- <input type="submit" value="Log in" /> -->
+				<input type="submit" value="登录" class="btn btn-primary"/>
+
+				<%--<a id="zhanghaomm" onclick="zhmmdl">账号密码登录</a>--%>
+				<!-- <a href="#">Register</a> -->
+			</div>
+			<button style="margin-bottom: 0" id="zhanghaomm" type="button" class="layui-btn layui-btn-primary layui-btn-sm">账号密码登录</button>
+		</form>
+
 	</section><!-- content -->
 </div>
 <!-- container -->
@@ -53,6 +86,19 @@
 </div>
 
 <script>
+	$(document).ready(function () {
+		$("#duanxindl").click(function () {
+			$("#nameAndPass").hide();
+			$("#duanxin").show();
+			$("#sjhm").css("background","#E6E6E6");
+			$("#yzm").css("background","#E6E6E6");
+		});
+		$("#zhanghaomm").click(function () {
+			$("#nameAndPass").show();
+			$("#duanxin").hide();
+		})
+	});
+
 
 	var ctx = document.getElementById("check").getContext("2d");
 
@@ -60,7 +106,7 @@
 
 	var ctxH = document.getElementById("check").clientHeight;
 
-
+	var yzm = ranNum(3,5);
 
 	/**
 
@@ -498,6 +544,6 @@
 
 	document.getElementById('check').onclick = drawCanvas;
 </script>
-
+<script src="/static/layui/layui.js" charset="utf-8"></script>
 </body>
 </html>

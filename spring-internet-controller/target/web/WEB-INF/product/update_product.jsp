@@ -36,7 +36,7 @@
         </div>--%>
 
         <div class="layui-form-item">
-            <label class="layui-form-label">单行选择框</label>
+            <label class="layui-form-label">商品类型</label>
             <div class="layui-input-block">
                 <select name="productType" lay-filter="aihao">
                     <option value=""></option>
@@ -70,7 +70,6 @@
             </a>
         </div>
 
-
     <div class="layui-form-item">
         <input type="submit" class="layui-btn" value="修改">
         <a href="/listProduct"><input type="button" class="layui-btn" value="取消"></a>
@@ -79,14 +78,14 @@
 </form>
 
 <script src="/static/layui/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的路径 -->
 <script>
-    var selected="${product.productType}";
+/*    var selected="{product.productType}";
     $("#sel").find("option").each(function(){
         if($(this).text() == selected)	{
             $(this).attr("selected",true);
         }
-    });
+    });*/
 
 
     layui.use(['form', 'layedit', 'laydate'], function(){

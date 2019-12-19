@@ -125,8 +125,8 @@
         </dependency>
 
         <dependency>
-              <groupId>com.aliyun</groupId>
-              <artifactId>aliyun-java-sdk-core</artifactId>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
         </dependency>
 
     </dependencies>

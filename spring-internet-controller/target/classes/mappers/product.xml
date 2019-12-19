@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.ProductDao">
     <select id="classify" resultType="com.entity.Product">
-         SELECT product_Id, product_Name, product_Price, product_Image,product_Type, product_Count, product_Comment FROM product where product_Type=#{productType}
+         SELECT product_Id, product_Name, product_Price, product_Image,product_Type, product_Count, product_Comment FROM product where product_Type=#{productType} order by product_Id
     </select>
 
     <select id="getAllProduct" resultType="com.entity.Product">

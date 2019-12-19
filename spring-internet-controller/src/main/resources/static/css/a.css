@@ -1,0 +1,18 @@
+#hqyzm.hand:hover   {cursor:hand}
+
+#hqyzm{
+    width:100px;
+    display:block;
+    padding:10px 0;
+    border:solid 1px #17bec4;
+    border-radius:4px;
+    font-size:15px;
+    color:#17bec4;
+    text-align:center;
+}
+
+#hqyzm:hover{
+    background:#17bec4;
+    color:#fff;
+    text-decoration: none;
+}

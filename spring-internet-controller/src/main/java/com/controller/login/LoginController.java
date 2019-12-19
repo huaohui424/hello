@@ -1,5 +1,6 @@
 package com.controller.login;
 
+import com.config.SMSVerification;
 import com.entity.Admin;
 import com.entity.Users;
 import com.service.AdminServier;
@@ -59,6 +60,18 @@ public class LoginController {
     public String loginOut(HttpSession session){
         session.setAttribute("username",null);
         return "admin/login";
+    }
+
+    /*@RequestMapping("/getVerification")
+    public String
+    */
+    @RequestMapping("/SMSVerification")
+    public String SMSVerifications(String phoneNumber){
+        SMSVerification smsVerification = new SMSVerification();
+        System.out.println("短信验证码："+smsVerification.sendMessage(phoneNumber));
+        smsVerification.sendUtils(smsVerification.sendMessage(phoneNumber),smsVerification.getVerication());
+
+        return "admin/index";
     }
 
 

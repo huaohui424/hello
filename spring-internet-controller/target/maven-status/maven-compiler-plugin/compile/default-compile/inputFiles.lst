@@ -7,7 +7,7 @@ D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\cus
 D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\custom\NotRegister.java
 D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\interceptor\SecondInterceptor.java
 D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\controller\admin\AdminController.java
-D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\config\ALiYun.java
+D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\config\SMSVerification.java
 D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\controller\bar\BarController.java
 D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\config\AppConfig.java
 D:\packge\spring-myinternet-bar\spring-internet-controller\src\main\java\com\controller\users\UsersController.java

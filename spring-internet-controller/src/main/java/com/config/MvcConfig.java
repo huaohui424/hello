@@ -48,6 +48,7 @@ public class MvcConfig implements WebMvcConfigurer {
         interceptorRegistration.excludePathPatterns("/static/**");
         interceptorRegistration.excludePathPatterns("/login");
         interceptorRegistration.excludePathPatterns("/productClassify");
+        interceptorRegistration.excludePathPatterns("/SMSVerification");
         //InterceptorRegistration interceptorRegistration1 = registry.addInterceptor(new SecondInterceptor());
         //interceptorRegistration1.addPathPatterns("/employee/**");
         //interceptorRegistration1.addPathPatterns("/userInfo/**");
