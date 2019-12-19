@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.AdminDao">
+   <select id="getAllAdmin" resultType="com.entity.Admin">
+       SELECT admin_Id, admin_Enabled, admin_Username, admin_Password, admin_Name, Admin_Sex, Admin_Age, admin_Idcard,
+       admin_Address, admin_Phone, Admin_Nation, admin_Remark,admin_Image FROM admin ORDER BY admin_Id
+   </select>
+
+    <select id="checkAdmin" resultType="com.entity.Admin">
+        SELECT admin_Id, admin_Enabled, admin_Username, admin_Password, admin_Name, Admin_Sex, Admin_Age, admin_Idcard,
+       admin_Address, admin_Phone, Admin_Nation, admin_Remark,admin_Image FROM admin WHERE admin_Username=#{adminUsername}
+    </select>
+
+    <select id="getById" resultType="com.entity.Admin">
+       SELECT admin_Id, admin_Enabled, admin_Username, admin_Password, admin_Name, Admin_Sex, Admin_Age, admin_Idcard,
+       admin_Address, admin_Phone, Admin_Nation, admin_Remark,admin_Image FROM admin where admin_Id = #{adminId}
+   </select>
+
+    <insert id="insertAdmin">
+            INSERT INTO admin(admin_Username, admin_Password, admin_Name, Admin_Sex, Admin_Age, admin_IdCard, admin_Address, admin_Phone, Admin_Nation, admin_Remark,admin_Image,admin_Enabled)
+VALUES (#{adminUsername},#{adminPassword},#{adminName},#{adminSex},#{adminAge},#{adminIdCard},#{adminAddress},#{adminPhone},#{adminNation},#{adminRemark},#{adminImage},#{adminEnabled})
+    </insert>
+
+    <update id="updateAdmin">
+        UPDATE admin SET admin_Enabled=#{adminEnabled},admin_Username=#{adminUsername},admin_Password=#{adminPassword},admin_Name=#{adminName},Admin_Sex=#{adminSex},Admin_Age=#{adminAge},admin_IdCard=#{adminIdCard},admin_Address=#{adminAddress},admin_Phone=#{adminPhone},Admin_Nation=#{adminNation},admin_Remark=#{adminRemark}
+        WHERE admin_Id = #{adminId}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM admin WHERE admin_Id=#{adminId}
+    </delete>
+</mapper>

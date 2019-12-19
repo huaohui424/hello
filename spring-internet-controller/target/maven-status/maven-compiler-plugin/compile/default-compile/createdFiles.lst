@@ -1,0 +1,15 @@
+com\controller\product\ProductController.class
+com\controller\login\LoginController.class
+com\config\ALiYun.class
+com\custom\NotRegisterValidator.class
+com\config\SystemConfig.class
+com\config\MvcConfig.class
+com\custom\NotRegister.class
+com\interceptor\SecondInterceptor.class
+com\controller\users\UsersController.class
+com\controller\boos\BoosController.class
+com\controller\computer\ComputerController.class
+com\controller\admin\AdminController.class
+com\config\AppConfig.class
+com\controller\bar\BarController.class
+com\controller\upload\UploadController.class

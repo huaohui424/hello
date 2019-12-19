@@ -1,0 +1,40 @@
+* {
+    padding:0;
+    margin:0;
+}
+body {
+    font-family:verdana;
+    font-size:12px;
+}
+.content {
+    width:550px;
+    margin:20px auto;
+}
+.content h1 {
+    font-family:'微软雅黑';
+    font-size:18px;
+    padding-bottom:5px;
+}
+table {
+    width:100%;
+}
+th, td {
+    padding:6px 0;
+    text-align:center;
+}
+th {
+    background-color:#007D28;
+    color:#ffffff;
+}
+
+tr {
+    background-color:#E8FFE8;
+}
+
+.odd {
+    background-color:#FFF3EE;
+}
+
+.highlight {
+    background-color:#E0E0E0;
+}

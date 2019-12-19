@@ -1,0 +1,19 @@
+table {
+	width:100%;
+}
+th, td {
+	padding:6px 0;
+	text-align:center;
+}
+th {
+	background-color:#007D28;
+	color:#ffffff;
+}
+
+tr {
+	background-color:#E8FFE8;
+}
+
+.highlight {
+	background-color:#E0E0E0;
+}

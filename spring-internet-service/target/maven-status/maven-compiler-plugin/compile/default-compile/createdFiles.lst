@@ -1,0 +1,6 @@
+com\service\ProductService.class
+com\service\UsersService.class
+com\service\AdminServier.class
+com\service\BoosService.class
+com\service\SpendsService.class
+com\service\ComputerService.class

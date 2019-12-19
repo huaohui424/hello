@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.UsersDao">
+    <select id="getAllUser" resultType="com.entity.Users">
+        SELECT users_Id, users_Name, users_Call, users_Address, users_IdCard, users_Password, users_Sex, users_Age, users_Consume, users_CarDid, users_MenBer, users_Balance
+        FROM users ORDER BY users_Id
+    </select>
+
+    <select id="getById" resultType="com.entity.Users">
+        SELECT users_Id, users_Name, users_Call, users_Address, users_IdCard, users_Password, users_Sex, users_Age, users_Consume, users_CarDid, users_MenBer, users_Balance
+        FROM users WHERE users_Id =#{usersId}
+    </select>
+
+    <select id="count">
+        SELECT COUNT(users_Id) FROM users
+    </select>
+
+    <insert id="insertUser">
+        INSERT INTO users(users_Name, users_Call, users_Address, users_IdCard, users_Password, users_Sex, users_Age, users_MenBer) VALUES
+(#{usersName},#{usersCall},#{usersAddress},#{usersIdCard},#{usersPassword},#{usersSex},#{usersAge},#{usersMenBer})
+    </insert>
+
+    <update id="updateUser">
+        UPDATE users SET users_Name=#{usersName},users_Call=#{usersCall},users_Address=#{usersAddress},users_IdCard=#{usersIdCard},users_Password=#{usersPassword},users_Sex=#{usersSex},users_Age=#{usersAge},users_MenBer=#{usersMenBer},users_Balance=#{usersBalance}
+        WHERE users_Id =#{usersId}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM users  WHERE users_Id =#{usersId}
+    </delete>
+</mapper>

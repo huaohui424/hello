@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.ProductDao">
+    <select id="classify" resultType="com.entity.Product">
+         SELECT product_Id, product_Name, product_Price, product_Image,product_Type, product_Count, product_Comment FROM product where product_Type=#{productType}
+    </select>
+
+    <select id="getAllProduct" resultType="com.entity.Product">
+        SELECT product_Id, product_Name, product_Price, product_Image,product_Type, product_Count, product_Comment FROM product order by product_Id
+    </select>
+
+    <select id="getById" resultType="com.entity.Product">
+        SELECT product_Id, product_Name, product_Price, product_Image,product_Type, product_Count, product_Comment FROM product where product_Id=#{productId}
+    </select>
+
+    <insert id="insertProduct">
+        INSERT INTO product(product_Name, product_Price, product_Image, product_Type, product_Count, product_Comment) VALUES (#{productName},#{productPrice},#{productImage},#{productType},#{productCount},#{productComment})
+    </insert>
+
+    <update id="updateProduct">
+        UPDATE product SET product_Name=#{productName}, product_Price=#{productPrice}, product_Image=#{productImage},
+                   product_Type=#{productType}, product_Count=#{productCount}, product_Comment=#{productComment} WHERE product_Id =#{productId}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM product  WHERE product_Id =#{productId}
+    </delete>
+</mapper>

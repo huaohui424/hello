@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-internet-exception" />
+        <module name="spring-internet-service" />
+        <module name="spring-internet-entity" />
+        <module name="spring-internet-interceptor" />
+        <module name="spring-internet-controller" />
+        <module name="spring-internet-dao" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-internet-config" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.BoosDao">
+    <select id="getAllBoos">
+        SELECT boss_Id, boss_Name, boss_Phone, boss_Address, boss_Enabled, boss_Username, boss_Password, boss_IdCard
+        FROM boss ORDER BY boss_Id
+    </select>
+
+    <insert id="insertBoos">
+        INSERT INTO boss(boss_Name, boss_Phone, boss_Address, boss_Enabled, boss_Username, boss_Password, boss_IdCard)
+VALUES (#{bossName},#{bossPhone},#{bossAddress},#{bossEnabled},#{bossUsername},#{bossPassword},#{bossIdCard})
+    </insert>
+
+    <update id="updateBoos">
+        UPDATE boss SET boss_Name=#{bossName},boss_Phone=#{bossPhone},boss_Address=#{bossAddress},boss_Enabled=#{bossEnabled},boss_Username=#{bossUsername},boss_Password=#{bossPassword},boss_IdCard=#{bossIdCard}
+         where boss_Id=#{bossId}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM boss WHERE boss_Id=#{bossId}
+    </delete>
+</mapper>

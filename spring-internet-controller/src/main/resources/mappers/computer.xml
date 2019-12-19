@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.ComputerDao">
+    <select id="getAll" resultType="com.entity.Computer">
+       select computer_Id,computer_Name,computer_Type,computer_Price,computer_Count,computer_Time,computer_Comment,computer_Nid,computer_Sid,computer_Maintain,computer_image
+    from computer order by computer_Id
+    </select>
+
+    <select id="getById" resultType="com.entity.Computer">
+       select computer_Id,computer_Name,computer_Type,computer_Price,computer_Count,computer_Time,computer_Comment,computer_Nid,computer_Sid,computer_Maintain,computer_image
+    from computer where computer_Id =#{computer_Id}
+    </select>
+
+    <insert id="insert">
+        insert into computer( computer_Type,computer_Price ,computer_Count, computer_Comment,computer_image) VALUES (#{computerType},#{computerPrice},#{computerCount},#{computerComment},#{computerImage})
+    </insert>
+
+    <update id="update">
+        UPDATE computer SET computer_Name=#{computerName},computer_Type=${computerType},computer_Price=#{computerPrice},computer_Count=#{computerCount},computer_image=#{computerImage},
+        computer_Time=#{computerTime},computer_Comment=#{computerComment},computer_Nid=#{computerNid},computer_Sid=#{computerSid},computer_Maintain=#{computerMaintain} where computer_Id=#{computerId}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM computer WHERE computer_Id=#{computerId}
+    </delete>
+</mapper>

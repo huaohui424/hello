@@ -1,0 +1,6 @@
+com\dao\UsersDao.class
+com\dao\SpendsDao.class
+com\dao\ComputerDao.class
+com\dao\BoosDao.class
+com\dao\ProductDao.class
+com\dao\AdminDao.class
