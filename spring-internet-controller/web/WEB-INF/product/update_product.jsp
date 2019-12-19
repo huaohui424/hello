@@ -70,7 +70,6 @@
             </a>
         </div>
 
-
     <div class="layui-form-item">
         <input type="submit" class="layui-btn" value="修改">
         <a href="/listProduct"><input type="button" class="layui-btn" value="取消"></a>
