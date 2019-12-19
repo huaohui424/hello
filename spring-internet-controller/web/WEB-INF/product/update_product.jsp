@@ -78,7 +78,7 @@
 </form>
 
 <script src="/static/layui/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 重要 -->
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>
 /*    var selected="{product.productType}";
     $("#sel").find("option").each(function(){
